@@ -21,10 +21,14 @@
 					<!--profile left part-->
 					<div class="my_account one-fourth wow fadeInLeft">
 						<figure>
-							<img src="/images/avatar4.jpg" alt="" />
+							<% if session[:user]["avatar"].nil? %>
+								<img src="/images/avatar4.jpg" alt="" />
+							<% else %>
+								<img src="<%= session[:user]['avatar'] %>" alt="" />
+							<% end %>
 						</figure>
 						<div class="container">
-							<h2>Anabelle Q.</h2> 
+							<h2><%= session[:user]["name"] %></h2> 
 						</div>
 					</div>
 					<!--//profile left part-->
@@ -44,9 +48,9 @@
 							<div class="row">
 								<dl class="basic two-third">
 									<dt>Name</dt>
-									<dd>Anabelle Q.</dd>
-									<dt>Favorite cusine</dt>
-									<dd>Thai, Mexican</dd>
+									<dd><%= session[:user]["name"] %></dd>
+									<dt>Email</dt>
+									<dd><%= session[:user]["email"] %></dd>
 									<dt>Favorite appliances</dt>
 									<dd>Blender, sharp knife</dd>
 									<dt>Favorite spices</dt>

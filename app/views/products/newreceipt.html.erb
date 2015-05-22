@@ -19,12 +19,12 @@
 				<!--content-->
 				<section class="content full-width wow fadeInUp">
 					<div class="submit_recipe container">
-						<form>
+						<form action="/products/create" method="POST" enctype="multipart/form-data">
 							<section>
 								<h2>Basics</h2>
 								<p>All fields are required.</p>
 								<div class="f-row">
-									<div class="full"><input type="text" placeholder="Recipe title" /></div>
+									<div class="full"><input type="text" name="product[title]" placeholder="Product title" /></div>
 								</div>
 								<div class="f-row">
 									<div class="third"><input type="text" placeholder="Preparation time" /></div>
@@ -40,7 +40,7 @@
 							<section>
 								<h2>Description</h2>
 								<div class="f-row">
-									<div class="full"><textarea placeholder="Recipe title"></textarea></div>
+									<div class="full"><textarea placeholder="Product desctiption" name="product[description]"></textarea></div>
 								</div>
 							</section>	
 							
@@ -48,7 +48,7 @@
 								<h2>Ingredients</h2>
 								<div class="f-row ingredient">
 									<div class="large"><input type="text" placeholder="Ingredient" /></div>
-									<div class="small"><input type="text" placeholder="Quantity" /></div>
+									<div class="small"><input type="text"  name="product[quantity]" placeholder="Quantity" /></div>
 									<div class="third"><select><option selected="selected">Select a category</option></select></div>
 									<button class="remove">-</button>
 								</div>
@@ -71,24 +71,24 @@
 							<section>
 								<h2>Photo</h2>
 								<div class="f-row full">
-									<input type="file" />
+									<input type="file" name="product[photo]" />
 								</div>
 							</section>	
 							
 							<section>
 								<h2>Status <span>(would you like to further edit this recipe or are you ready to publish it?)</span></h2>
 								<div class="f-row full">
-									<input type="radio" id="r1" name="radio"/>
+									<input type="radio" id="r1" name="product[status]" value="1"/>
 									<label for="r1">I am still working on it</label>
 								</div>
 								<div class="f-row full">
-									<input type="radio" id="r2" name="radio"/>
+									<input type="radio" id="r2" name="product[status]" value="2"/>
 									<label for="r2">I am ready to publish this recipe</label>
 								</div>
 							</section>
 							
 							<div class="f-row full">
-								<input type="submit" class="button" id="submitRecipe" value="Publish this recipe" />
+								<input type="submit" class="button" id="submitRecipe" value="Create Product" />
 							</div>
 						</form>
 					</div>
