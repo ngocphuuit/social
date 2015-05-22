@@ -14551,3 +14551,441 @@ Processing by ProductsController#detail as HTML
   Rendered products/detail.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
   [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (67.4ms)[0m  INSERT INTO "products" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-05-22 13:36:08.976077"], ["updated_at", "2015-05-22 13:36:08.976077"]]
+  [1m[36m (229.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 20:37:01 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant ApplicationController::SessionsHelper):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/welcome_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (160.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (204.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2015-05-22 20:37:04 +0700
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 20:37:14 +0700
+
+ActionController::RoutingError (uninitialized constant ApplicationController::SessionsHelper):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/welcome_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 20:37:16 +0700
+
+ActionController::RoutingError (uninitialized constant ApplicationController::SessionsHelper):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/welcome_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 20:37:33 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 20:37:40 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-22 20:37:44 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "description"=>"", "quantity"=>""}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (88.4ms)[0m  [1mINSERT INTO "products" ("title", "description", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["photo", nil], ["created_at", "2015-05-22 13:37:44.284255"], ["updated_at", "2015-05-22 13:37:44.284255"]]
+  [1m[35m (162.5ms)[0m  commit transaction
+Completed 500 Internal Server Error in 553ms (ActiveRecord: 457.1ms)
+
+NoMethodError (undefined method `products_detail_path' for #<ProductsController:0x007efff8665770>):
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f0006100a38 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f0006100718 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f00060f8298 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/create" for 127.0.0.1 at 2015-05-22 20:37:57 +0700
+
+ActionController::RoutingError (No route matches [GET] "/products/create"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (35.1ms)
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 20:38:41 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-22 20:38:44 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "description"=>"", "quantity"=>""}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("title", "description", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", ""], ["description", ""], ["photo", nil], ["created_at", "2015-05-22 13:38:44.918406"], ["updated_at", "2015-05-22 13:38:44.918406"]]
+  [1m[36m (126.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 126.9ms)
+
+NoMethodError (undefined method `products_detail_path' for #<ProductsController:0x007f00059faf40>):
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f0006100a38 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f0006100718 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f00060f8298 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 20:40:58 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-22 20:41:00 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "description"=>"", "quantity"=>""}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (95.5ms)[0m  [1mINSERT INTO "products" ("title", "description", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["photo", nil], ["created_at", "2015-05-22 13:41:00.750337"], ["updated_at", "2015-05-22 13:41:00.750337"]]
+  [1m[35m (395.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 504ms (ActiveRecord: 491.2ms)
+
+NoMethodError (undefined method `products_detail_path' for #<ProductsController:0x007efff85cc868>):
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f0006100a38 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f0006100718 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f00060f8298 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 20:41:45 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-22 20:41:47 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "description"=>"", "quantity"=>""}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("title", "description", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", ""], ["description", ""], ["photo", nil], ["created_at", "2015-05-22 13:41:47.938008"], ["updated_at", "2015-05-22 13:41:47.938008"]]
+  [1m[36m (182.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 183.7ms)
+
+NoMethodError (undefined method `products_detail_path' for #<ProductsController:0x007f000531afe0>):
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.4ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f0006100a38 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f0006100718 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f00060f8298 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 20:41:58 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-22 20:42:00 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "description"=>"", "quantity"=>""}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("title", "description", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["photo", nil], ["created_at", "2015-05-22 13:42:00.996275"], ["updated_at", "2015-05-22 13:42:00.996275"]]
+  [1m[35m (407.3ms)[0m  commit transaction
+Completed 500 Internal Server Error in 423ms (ActiveRecord: 408.1ms)
+
+NoMethodError (undefined method `products_detail_path' for #<ProductsController:0x007efff8f16360>):
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.5ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f0006100a38 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f0006100718 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f00060f8298 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 20:42:16 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-22 20:42:18 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "description"=>"", "quantity"=>""}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("title", "description", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", ""], ["description", ""], ["photo", nil], ["created_at", "2015-05-22 13:42:18.647873"], ["updated_at", "2015-05-22 13:42:18.647873"]]
+  [1m[36m (189.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 189.9ms)
+
+NameError (undefined local variable or method `products_detail_path' for #<ProductsController:0x007efff8257908>):
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f0006100a38 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f0006100718 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f00060f8298 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 20:44:32 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-22 20:44:35 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "description"=>"", "quantity"=>""}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (182.2ms)[0m  [1mINSERT INTO "products" ("title", "description", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["photo", nil], ["created_at", "2015-05-22 13:44:35.042556"], ["updated_at", "2015-05-22 13:44:35.042556"]]
+  [1m[35m (507.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/detail/13
+Completed 302 Found in 728ms (ActiveRecord: 690.5ms)
+
+
+Started GET "/products/detail/13" for 127.0.0.1 at 2015-05-22 20:44:36 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"13"}
+  [1m[36mProduct Load (88.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered products/detail.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 319ms (Views: 31.3ms | ActiveRecord: 88.1ms)
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 20:45:24 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-22 20:45:53 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Sony xperia Z3", "description"=>"test photo product", "quantity"=>"1", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007efff8be9408 @tempfile=#<Tempfile:/tmp/RackMultipart20150522-30434-1u6l25h.jpg>, @original_filename="339970-bigthumbnail.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"339970-bigthumbnail.jpg\"\r\nContent-Type: image/jpeg\r\n">, "status"=>"1"}}
+Unpermitted parameter: photo
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (89.0ms)[0m  [1mINSERT INTO "products" ("title", "description", "status", "quantity", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Sony xperia Z3"], ["description", "test photo product"], ["status", "t"], ["quantity", 1], ["photo", "339970-bigthumbnail.jpg"], ["created_at", "2015-05-22 13:45:53.105034"], ["updated_at", "2015-05-22 13:45:53.105034"]]
+  [1m[35m (363.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/detail/14
+Completed 302 Found in 555ms (ActiveRecord: 452.8ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-22 20:45:53 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-22 20:47:39 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-22 20:48:17 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-22 20:49:48 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-22 20:51:18 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-22 20:52:19 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-22 21:06:46 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 79ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 21:06:51 +0700
+Processing by ProductsController#newreceipt as HTML
+  Rendered products/newreceipt.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/newreceipts" for 127.0.0.1 at 2015-05-22 21:07:07 +0700
+Processing by ProductsController#newreceipt as HTML
+Redirected to http://localhost:3000/users/login
+Filter chain halted as :check_login rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2015-05-22 21:07:07 +0700
+Processing by UsersController#login_form as HTML
+  Rendered users/login_form.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 21:07:14 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)

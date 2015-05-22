@@ -15,7 +15,7 @@
 			<!--row-->
 			<div class="row">
 				<header class="s-title wow fadeInLeft">
-					<h1>A luxurious black &amp; white chocolate cupcake</h1>
+					<h1><%= @product.title %></h1>
 				</header>
 				<!--content-->
 				<section class="content three-fourth">
@@ -24,8 +24,8 @@
 							<div class="row">
 								<!--two-third-->
 								<article class="two-third wow fadeInLeft">
-									<div class="image"><a href="#"><img src="/images/img.jpg" alt="" /></a></div>
-									<div class="intro"><p><strong>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</strong></p> <p>Molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p></div>
+									<div class="image"><a href="#"><img src="<%= @product.photo_url %>" alt="" height="284px" width="568px"/></a></div>
+									<div class="intro"><p><%= @product.description %></p></div>
 									<div class="instructions">
 										<ol>
 											<li>Heat oven to 160C/140C fan/gas 3 and line a 12-hole muffin tin with cases. Gently melt the butter, chocolate, sugar and 100ml hot water together in a large saucepan, stirring occasionally, then set aside to cool a little while you weigh the other ingredients.</li>
@@ -39,9 +39,9 @@
 								<!--one-third-->
 								<article class="one-third wow fadeInDown">
 									<dl class="basic">
-										<dt>Preparation time</dt>
+										<dt>Price</dt>
 										<dd>15 mins</dd>
-										<dt>Cooking time</dt>
+										<dt>Quantity</dt>
 										<dd>30 mins</dd>
 										<dt>Difficulty</dt>
 										<dd>easy</dd>
@@ -53,7 +53,13 @@
 										<dt>Category</dt>
 										<dd>Deserts</dd>
 										<dt>Posted by</dt>
-										<dd>Jennifer W.</dd>
+										<dd>NoPu Nguyen</dd>
+										<dt>Phone</dt>
+										<dd>0975667043</dd>
+										<dt>Address</dt>
+										<dd>Ho Chi Minh, Thu Duc</dd>
+										<dt>Email</dt>
+										<dd>nopunguyen@gmail.com</dd>
 									</dl>
 									
 									<dl class="ingredients">
