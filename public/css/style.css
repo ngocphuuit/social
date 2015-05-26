@@ -244,7 +244,7 @@ h2.star			{background-position:-408px -61px;width:50px;height:60px;text-indent:-
 h2.bright		{background-position:0 -60px;width:210px;height:45px;position:static;font-size:22px;line-height:43px;font-weight:600;margin:0 0 26px;}
 h2.large		{background-position:0 0;width:572px;height:58px;position:static;font-size:27px;line-height:56px;font-weight:600;max-width:100%;}
 
-.entry h2 		{padding-top:0;color:#666;}
+.entry h2 		{height: 41px; padding-top:0;color:#666;}
 .entry h2 a 		{color:#666;}
 .entry h2 a:hover {color:#F4716A;}
 
@@ -266,7 +266,7 @@ blockquote:before 			{content:"";background:url(../images/ico/icons.png) -297px 
 .featured.two-third .more 		{padding:10px 0 0 20px !important;}
 .featured.one-third .button		{width:100%;margin:0 0 17px;}
 
-.actions .difficulty			{border-right:0;width:47%;}
+.actions .difficulty			{border-right:0;/* width:47%; */}
 .actions .difficulty .ico 	{margin-bottom:-1px;}
 
 .main .quicklinks 	{float:left;display:block;width:100%;text-align:center;padding:0 0 30px;}
@@ -376,10 +376,10 @@ dl 			{display:inline-block;width:100%;margin:0 0 22px;}
 .recipe dd,
 .basic dd 	{float:left;margin:0 0 8px;padding:0 15px;height:35px;font-size:14px;line-height:37px;font-weight:600;background:#FF7B74;color:#fff;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.15);-moz-box-shadow:0 1px 0 rgba(0,0,0,.15);box-shadow:0 1px 0 rgba(0,0,0,.15);}	
 
-.basic dt 		{width:65%;}
-.basic dd 		{width:35%;background:#FF8E88;}
-.user dt 			{width:50%;font-size:13px;}
-.user dd 		{width:50%;background:#DBBC94;}
+.basic dt 		{width:35%;}
+.basic dd 		{width:65%;background:#FF8E88;}
+.user dt 			{width:35%;font-size:13px;}
+.user dd 		{width:65%;background:#DBBC94;}
 .user dd a 		{color:#fff;}
 .ingredients dt 	{width:35%;font-size:13px;}
 .ingredients dd 	{width:65%;}	

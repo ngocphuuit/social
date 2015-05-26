@@ -44,3 +44,5 @@ group :development, :test do
 end
 
 gem 'carrierwave'
+
+gem "ckeditor"

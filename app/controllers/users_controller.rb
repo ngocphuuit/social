@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 	before_action :check_login, only: [:info, :timeline]
 
 	def info
-		
+		@user = User.find(session[:user]["id"])
+		@products = @user.products
 	end
 
 	def timeline

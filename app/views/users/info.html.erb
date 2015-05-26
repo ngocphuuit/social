@@ -37,7 +37,7 @@
 						<nav class="tabs">
 							<ul>
 								<li class="active"><a href="#about" title="About me">About me</a></li>
-								<li><a href="#recipes" title="My recipes">My recipes</a></li>
+								<li><a href="#recipes" title="My recipes">My products</a></li>
 								<li><a href="#favorites" title="My favorites">My favorites</a></li>
 								<li><a href="#posts" title="My posts">My posts</a></li>
 							</ul>
@@ -48,15 +48,15 @@
 							<div class="row">
 								<dl class="basic two-third">
 									<dt>Name</dt>
-									<dd><%= session[:user]["name"] %></dd>
+									<dd><%= @user.name %></dd>
 									<dt>Email</dt>
-									<dd><%= session[:user]["email"] %></dd>
-									<dt>Favorite appliances</dt>
-									<dd>Blender, sharp knife</dd>
-									<dt>Favorite spices</dt>
-									<dd>Chilli, Oregano, Basil</dd>
-									<dt>Recipes submitted</dt>
-									<dd>9</dd>
+									<dd><%= @user.email %></dd>
+									<dt>Address</dt>
+									<dd><%= @user.address %></dd>
+									<dt>Phone</dt>
+									<dd><%= @user.phone %></dd>
+									<dt>Products submitted</dt>
+									<dd><%= @user.products.count %></dd>
 									<dt>Posts submitted</dt>
 									<dd>9</dd>
 								</dl>
@@ -83,62 +83,27 @@
 						<!--my recipes-->
 						<div class="tab-content" id="recipes">
 							<div class="entries row">
-								<!--item-->
-								<div class="entry one-third">
-									<figure>
-										<img src="/images/img6.jpg" alt="" />
-										<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-									</figure>
-									<div class="container">
-										<h2><a href="recipe.html">Thai fried rice with fruit and vegetables</a></h2> 
-										<div class="actions">
-											<div>
-												<div class="difficulty"><i class="ico i-medium"></i><a href="#">medium</a></div>
-												<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-												<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
+
+								<% @products.each do |product| %>
+									<!--item-->
+									<div class="entry one-third">
+										<figure>
+											<img src="<%= product.photo %>" alt="" height="203px" style="margin: auto"/>
+											<figcaption><a href="/products/detail/<%= product.id %>"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
+										</figure>
+										<div class="container">
+											<h2><a href="/products/detail/<%= product.id %>"><%= product.title %></a></h2> 
+											<div class="actions">
+												<div>
+													<div class="difficulty"><i class="ico i-medium"></i><a href="#"><%= product.price %></a></div>
+													<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
+													<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments"><%= product.comments.count%></a></div>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<!--item-->
-								
-								<!--item-->
-								<div class="entry one-third">
-									<figure>
-										<img src="/images/img5.jpg" alt="" />
-										<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-									</figure>
-									<div class="container">
-										<h2><a href="recipe.html">Spicy Morroccan prawns with cherry tomatoes</a></h2> 
-										<div class="actions">
-											<div>
-												<div class="difficulty"><i class="ico i-hard"></i><a href="#">hard</a></div>
-												<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-												<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--item-->
-								
-								<!--item-->
-								<div class="entry one-third">
-									<figure>
-										<img src="/images/img8.jpg" alt="" />
-										<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-									</figure>
-									<div class="container">
-										<h2><a href="recipe.html">Super easy blueberry cheesecake</a></h2> 
-										<div class="actions">
-											<div>
-												<div class="difficulty"><i class="ico i-easy"></i><a href="#">easy</a></div>
-												<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-												<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--item-->
+									<!--item-->
+								<% end %>
 							</div>
 						</div>
 						<!--//my recipes-->

@@ -14989,3 +14989,1985 @@ Started GET "/" for 127.0.0.1 at 2015-05-22 21:07:14 +0700
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-25 12:10:30 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 137ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-25 12:10:56 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 267ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 12:11:05 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"15"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=15):
+  app/controllers/products_controller.rb:8:in `detail'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (41.3ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2015-05-25 12:11:05 +0700
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.8ms)
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 12:12:24 +0700
+
+SyntaxError (/var/www/social/app/controllers/products_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/products_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (38.1ms)
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 12:12:38 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"15"}
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+Completed 200 OK in 102ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-25 12:12:43 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 12:14:55 +0700
+Processing by ProductsController#newproduct as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template products/newproduct, application/newproduct with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/var/www/social/app/views"
+):
+  actionview (4.2.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (20.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (24.1ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 12:15:33 +0700
+Processing by ProductsController#newproduct as HTML
+  Rendered products/newproduct.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `products_newreceipts_path' for #<#<Class:0x007fe8bc225748>:0x007fe8a15a8b10>):
+    84: 						<%= link_to(users_info_path, title: 'My account') do %><i class="ico i-account"></i> <span>My account</span><%end%>
+    85: 					</li>
+    86: 					<li class="dark">
+    87: 						<%= link_to(products_newreceipts_path, title: 'Submit a recipe') do %><i class="ico i-submitrecipe"></i> <span>Submit a recipe</span><%end%>
+    88: 					</li>
+    89: 				</ul>
+    90: 			</nav>
+  app/views/layouts/application.html.erb:87:in `_app_views_layouts_application_html_erb__2345061230700885115_70318552599680'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (22.1ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 12:16:37 +0700
+Processing by ProductsController#newproduct as HTML
+  Rendered products/newproduct.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 12:17:29 +0700
+Processing by ProductsController#newproduct as HTML
+  Rendered products/newproduct.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 12:18:20 +0700
+Processing by ProductsController#newproduct as HTML
+  Rendered products/newproduct.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 12:19:26 +0700
+Processing by ProductsController#newproduct as HTML
+  Rendered products/newproduct.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" DESC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (17.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (11.5ms)[0m  INSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Laptop"], ["description", "You can sell or buy Laptop."], ["created_at", "2015-05-25 07:02:34.401841"], ["updated_at", "2015-05-25 07:02:34.401841"]]
+  [1m[36m (97.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "PC"], ["description", "You can sell or buy PC."], ["created_at", "2015-05-25 07:02:34.512971"], ["updated_at", "2015-05-25 07:02:34.512971"]]
+  [1m[35m (74.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Phone"], ["description", "HaveYou can sell or buy Laptop Phone."], ["created_at", "2015-05-25 07:02:34.588498"], ["updated_at", "2015-05-25 07:02:34.588498"]]
+  [1m[36m (74.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-25 14:02:56 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:03:06 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (286.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (2281.9ms)
+Completed 200 OK in 2398ms (Views: 1997.5ms | ActiveRecord: 286.5ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:06:00 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:11:57 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 72ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:12:27 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (2.9ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:12:38 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPriceToProduct (20150525071316)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (35.2ms)[0m  [1mALTER TABLE "products" ADD "price" float[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150525071316"]]
+  [1m[36m (108.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:13:25 +0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:15:18 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:15:21 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:15:23 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:15:28 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:15:29 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:15:30 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 14:15:37 +0700
+Processing by UsersController#info as HTML
+  Rendered users/info.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 83ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 14:15:41 +0700
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 14:15:43 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-25 14:16:31 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Sony VCHE28G", "quantity"=>"1", "price"=>"21000000", "category_id"=>"1", "description"=>"New Zin, company, sony vaio", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fe8bc167d60 @tempfile=#<Tempfile:/tmp/RackMultipart20150525-18603-bsg38d.jpg>, @original_filename="english_express.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"english_express.jpg\"\r\nContent-Type: image/jpeg\r\n">, "status"=>"1"}}
+Unpermitted parameter: photo
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("title", "description", "status", "quantity", "category_id", "price", "photo", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Sony VCHE28G"], ["description", "New Zin, company, sony vaio"], ["status", "t"], ["quantity", 1], ["category_id", 1], ["price", 21000000.0], ["photo", "english_express.jpg"], ["user_id", 6], ["created_at", "2015-05-25 07:16:32.056697"], ["updated_at", "2015-05-25 07:16:32.056697"]]
+  [1m[36m (102.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/detail/15
+Completed 302 Found in 244ms (ActiveRecord: 102.9ms)
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 14:16:32 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"15"}
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered products/detail.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 14:19:49 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"15"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/detail.html.erb within layouts/application (99.2ms)
+Completed 200 OK in 102ms (Views: 100.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 14:24:18 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"15"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/detail.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-25 14:24:40 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    44: 										<dt>Quantity</dt>
+    45: 										<dd><%= @product.quantity %></dd>
+    46: 										<dt>Category</dt>
+    47: 										<dd><%= @product.category.title %></dd>
+    48: 									</dl>
+    49: 
+    50: 									<dl class="user">
+  app/views/products/detail.html.erb:47:in `_app_views_products_detail_html_erb___115072171286820328_70318622442700'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (36.8ms)
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 14:24:53 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"15"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/detail.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 14:38:22 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"15"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/detail.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20150525074054)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20150525074201)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20150525074233)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (17.4ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "product_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_comments_on_product_id" ON "comments" ("product_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150525074233"]]
+  [1m[36m (99.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments"  ORDER BY "comments"."id" DESC LIMIT 1[0m
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 14:58:14 +0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:02:32 +0700
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 33ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:03:08 +0700
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:03:13 +0700
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:03:22 +0700
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:03:30 +0700
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:03:37 +0700
+Processing by ProductsController#receipts as HTML
+  Rendered products/receipts.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:06:52 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (26.8ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  Rendered products/receipts.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 55ms (Views: 27.9ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:07:35 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  Rendered products/receipts.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:07:43 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  Rendered products/receipts.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:08:24 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  Rendered products/receipts.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:08:33 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  Rendered products/receipts.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:08:41 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  Rendered products/receipts.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:10:16 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  Rendered products/receipts.html.erb within layouts/application (40.6ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `comments' for #<Product:0x007fe8bbba2d08>):
+    64: 										<div>
+    65: 											<div class="difficulty"><i class="ico i-medium"></i><a href="#">medium</a></div>
+    66: 											<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
+    67: 											<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments"><%= product.comments.count %></a></div>
+    68: 										</div>
+    69: 									</div>
+    70: 								</div>
+  app/views/products/receipts.html.erb:67:in `block in _app_views_products_receipts_html_erb__2154289971713066389_70318779462300'
+  app/views/products/receipts.html.erb:54:in `_app_views_products_receipts_html_erb__2154289971713066389_70318779462300'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (28.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:10:43 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (134.9ms)
+Completed 200 OK in 187ms (Views: 135.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:11:36 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:12:00 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:12:46 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:13:01 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:13:48 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:14:22 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:14:43 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:16:14 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/detail/15" for 127.0.0.1 at 2015-05-25 15:16:25 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"15"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/detail.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 72ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/detail/13" for 127.0.0.1 at 2015-05-25 15:16:46 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"13"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered products/detail.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    44: 										<dt>Quantity</dt>
+    45: 										<dd><%= @product.quantity %></dd>
+    46: 										<dt>Category</dt>
+    47: 										<dd><%= @product.category.title %></dd>
+    48: 									</dl>
+    49: 
+    50: 									<dl class="user">
+  app/views/products/detail.html.erb:47:in `_app_views_products_detail_html_erb___115072171286820328_70318622442700'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (24.9ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-25 15:16:55 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    44: 										<dt>Quantity</dt>
+    45: 										<dd><%= @product.quantity %></dd>
+    46: 										<dt>Category</dt>
+    47: 										<dd><%= @product.category.title %></dd>
+    48: 									</dl>
+    49: 
+    50: 									<dl class="user">
+  app/views/products/detail.html.erb:47:in `_app_views_products_detail_html_erb___115072171286820328_70318622442700'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (32.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (43.7ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-25 15:16:59 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered products/detail.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    44: 										<dt>Quantity</dt>
+    45: 										<dd><%= @product.quantity %></dd>
+    46: 										<dt>Category</dt>
+    47: 										<dd><%= @product.category.title %></dd>
+    48: 									</dl>
+    49: 
+    50: 									<dl class="user">
+  app/views/products/detail.html.erb:47:in `_app_views_products_detail_html_erb___115072171286820328_70318622442700'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (30.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (20.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (39.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:17:38 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 14]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 13]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 12]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 10]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 5]]
+  Rendered products/receipts.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.7ms)
+  [1m[35mProduct Load (304.9ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35m (12.9ms)[0m  begin transaction
+  [1m[36mSQL (31.0ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 5]]
+  [1m[35m (276.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 6]]
+  [1m[36m (91.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 7]]
+  [1m[35m (123.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 8]]
+  [1m[36m (77.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 9]]
+  [1m[35m (77.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 10]]
+  [1m[36m (77.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 11]]
+  [1m[35m (103.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 12]]
+  [1m[36m (79.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 13]]
+  [1m[35m (77.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 14]]
+  [1m[36m (77.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 15]]
+  [1m[35m (93.1ms)[0m  commit transaction
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 15:18:00 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  Rendered products/receipts.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 15:42:35 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (119.9ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (146.8ms)
+Completed 200 OK in 276ms (Views: 82.9ms | ActiveRecord: 119.9ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 16:04:24 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (14.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (68.3ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 14.2ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::CKeditor):
+    52: 							<section>
+    53: 								<h2>Description</h2>
+    54: 								<div class="f-row">
+    55: 									<%= CKeditor %>
+    56: 									<div class="full"><textarea placeholder="Product desctiption" name="product[description]"></textarea></div>
+    57: 								</div>
+    58: 							</section>	
+  app/views/products/newproduct.html.erb:55:in `_app_views_products_newproduct_html_erb___2982055672979406242_70318552953120'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (28.2ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 16:12:48 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (33.0ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 56ms (Views: 21.8ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/products/detail/14" for 127.0.0.1 at 2015-05-25 16:13:09 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"14"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 16:26:10 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-25 16:27:40 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Sony Xperia M4 Aqua Dual", "quantity"=>"1", "price"=>"6500000", "category_id"=>"3", "description"=>"Màn hình:\tHD, 5.0\", 720 x 1280 pixels\r\nCPU:\tSnapdragon 615, 8 nhân, -\r\nRAM\t2 GB\r\nHệ điều hành:\tAndroid 5.0 (Lollipop)\r\nCamera chính:\t13 MP, Quay phim FullHD 1080p@30fps\r\nCamera phụ:\t5 MP\r\nBộ nhớ trong:\t8 GB\r\nThẻ nhớ ngoài:\t128 GB\r\nDung lượng pin:\t2400 mAh", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fe8a922bbd8 @tempfile=#<Tempfile:/tmp/RackMultipart20150525-18603-2qwhyk.png>, @original_filename="sony-xperia-m4-aqua-dual-sim-400x534.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"sony-xperia-m4-aqua-dual-sim-400x534.png\"\r\nContent-Type: image/png\r\n">, "status"=>"1"}}
+Unpermitted parameter: photo
+  [1m[36m (45.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (348.7ms)[0m  INSERT INTO "products" ("title", "description", "status", "quantity", "category_id", "price", "photo", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Sony Xperia M4 Aqua Dual"], ["description", "Màn hình:\tHD, 5.0\", 720 x 1280 pixels\r\nCPU:\tSnapdragon 615, 8 nhân, -\r\nRAM\t2 GB\r\nHệ điều hành:\tAndroid 5.0 (Lollipop)\r\nCamera chính:\t13 MP, Quay phim FullHD 1080p@30fps\r\nCamera phụ:\t5 MP\r\nBộ nhớ trong:\t8 GB\r\nThẻ nhớ ngoài:\t128 GB\r\nDung lượng pin:\t2400 mAh"], ["status", "t"], ["quantity", 1], ["category_id", 3], ["price", 6500000.0], ["photo", "sony-xperia-m4-aqua-dual-sim-400x534.png"], ["user_id", 6], ["created_at", "2015-05-25 09:27:40.398051"], ["updated_at", "2015-05-25 09:27:40.398051"]]
+  [1m[36m (80.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/detail/16
+Completed 302 Found in 615ms (ActiveRecord: 475.0ms)
+
+
+Started GET "/products/detail/16" for 127.0.0.1 at 2015-05-25 16:27:40 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"16"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 16:27:53 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/detail/16" for 127.0.0.1 at 2015-05-25 16:28:00 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"16"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/detail/16" for 127.0.0.1 at 2015-05-25 16:28:17 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"16"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 17:17:08 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-25 17:18:08 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Samsung Galaxy S6 32GB", "quantity"=>"1", "price"=>"16000000", "category_id"=>"3", "description"=>"Màn hình:\tQuad HD, 5.1\", 1440 x 2560 pixels\r\nCPU:\tExynos 7420, 8 nhân, 4x1.5GHz Cortex-A53 & 4x2.1 GHz Cortex-A57\r\nRAM\t3GB\r\nHệ điều hành:\tAndroid 5.0 (Lollipop)\r\nCamera chính:\t16 MP, Quay phim 4K 2160p@30fps\r\nCamera phụ:\t5 MP\r\nBộ nhớ trong:\t32 GB\r\nThẻ nhớ ngoài:\tKhông\r\nDung lượng pin:\t2550mAh", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fe8a162b358 @tempfile=#<Tempfile:/tmp/RackMultipart20150525-18603-1vat37y.png>, @original_filename="samsung-galaxy-s6-400x534.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"samsung-galaxy-s6-400x534.png\"\r\nContent-Type: image/png\r\n">, "status"=>"1"}}
+Unpermitted parameter: photo
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("title", "description", "status", "quantity", "category_id", "price", "photo", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Samsung Galaxy S6 32GB"], ["description", "Màn hình:\tQuad HD, 5.1\", 1440 x 2560 pixels\r\nCPU:\tExynos 7420, 8 nhân, 4x1.5GHz Cortex-A53 & 4x2.1 GHz Cortex-A57\r\nRAM\t3GB\r\nHệ điều hành:\tAndroid 5.0 (Lollipop)\r\nCamera chính:\t16 MP, Quay phim 4K 2160p@30fps\r\nCamera phụ:\t5 MP\r\nBộ nhớ trong:\t32 GB\r\nThẻ nhớ ngoài:\tKhông\r\nDung lượng pin:\t2550mAh"], ["status", "t"], ["quantity", 1], ["category_id", 3], ["price", 16000000.0], ["photo", "samsung-galaxy-s6-400x534.png"], ["user_id", 6], ["created_at", "2015-05-25 10:18:08.980145"], ["updated_at", "2015-05-25 10:18:08.980145"]]
+  [1m[35m (384.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/detail/17
+Completed 302 Found in 438ms (ActiveRecord: 385.2ms)
+
+
+Started GET "/products/detail/17" for 127.0.0.1 at 2015-05-25 17:18:09 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"17"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 17:18:45 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-25 17:19:30 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"iPhone 5S 16GB", "quantity"=>"2", "price"=>"14000000", "category_id"=>"3", "description"=>"Màn hình:\tDVGA, 4.0\", 640 x 1136 pixels\r\nCPU:\tApple A7, 2 nhân, 1.3 GHz\r\nRAM\t1 GB\r\nHệ điều hành:\tiOS 8.0\r\nCamera chính:\t8.0 MP, Quay phim FullHD 1080p@30fps\r\nCamera phụ:\t1.2 MP\r\nBộ nhớ trong:\t16 GB\r\nThẻ nhớ ngoài:\tKhông\r\nDung lượng pin:\t1560 mAh", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fe8a08e14b8 @tempfile=#<Tempfile:/tmp/RackMultipart20150525-18603-1duoimw.png>, @original_filename="iphone-5s-16gb-1-400x533.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"iphone-5s-16gb-1-400x533.png\"\r\nContent-Type: image/png\r\n">, "status"=>"1"}}
+Unpermitted parameter: photo
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (34.8ms)[0m  INSERT INTO "products" ("title", "description", "status", "quantity", "category_id", "price", "photo", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "iPhone 5S 16GB"], ["description", "Màn hình:\tDVGA, 4.0\", 640 x 1136 pixels\r\nCPU:\tApple A7, 2 nhân, 1.3 GHz\r\nRAM\t1 GB\r\nHệ điều hành:\tiOS 8.0\r\nCamera chính:\t8.0 MP, Quay phim FullHD 1080p@30fps\r\nCamera phụ:\t1.2 MP\r\nBộ nhớ trong:\t16 GB\r\nThẻ nhớ ngoài:\tKhông\r\nDung lượng pin:\t1560 mAh"], ["status", "t"], ["quantity", 2], ["category_id", 3], ["price", 14000000.0], ["photo", "iphone-5s-16gb-1-400x533.png"], ["user_id", 6], ["created_at", "2015-05-25 10:19:30.422006"], ["updated_at", "2015-05-25 10:19:30.422006"]]
+  [1m[36m (488.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/detail/18
+Completed 302 Found in 526ms (ActiveRecord: 522.9ms)
+
+
+Started GET "/products/detail/18" for 127.0.0.1 at 2015-05-25 17:19:30 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"18"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 17:19:59 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered products/newproduct.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-25 17:20:46 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Samsung Galaxy Grand Prime G530", "quantity"=>"2", "price"=>"4100000", "category_id"=>"3", "description"=>"Màn hình:\tqHD, 5.0\", 540 x 960 pixels\r\nCPU:\tQualcomm Snapdragon 410, 4 nhân, 1.2 GHz\r\nRAM\t1 GB\r\nHệ điều hành:\tAndroid 4.4 (KitKat)\r\nCamera chính:\t8.0 MP, Quay phim FullHD 1080p@30fps\r\nCamera phụ:\t5 MP\r\nBộ nhớ trong:\t8 GB\r\nThẻ nhớ ngoài:\t64 GB\r\nDung lượng pin:\t2600 mAh", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fe8a03644b8 @tempfile=#<Tempfile:/tmp/RackMultipart20150525-18603-2atvzh.png>, @original_filename="samsung-galaxy-grand-prime-g530-1-400x533.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"samsung-galaxy-grand-prime-g530-1-400x533.png\"\r\nContent-Type: image/png\r\n">, "status"=>"1"}}
+Unpermitted parameter: photo
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("title", "description", "status", "quantity", "category_id", "price", "photo", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Samsung Galaxy Grand Prime G530"], ["description", "Màn hình:\tqHD, 5.0\", 540 x 960 pixels\r\nCPU:\tQualcomm Snapdragon 410, 4 nhân, 1.2 GHz\r\nRAM\t1 GB\r\nHệ điều hành:\tAndroid 4.4 (KitKat)\r\nCamera chính:\t8.0 MP, Quay phim FullHD 1080p@30fps\r\nCamera phụ:\t5 MP\r\nBộ nhớ trong:\t8 GB\r\nThẻ nhớ ngoài:\t64 GB\r\nDung lượng pin:\t2600 mAh"], ["status", "t"], ["quantity", 2], ["category_id", 3], ["price", 4100000.0], ["photo", "samsung-galaxy-grand-prime-g530-1-400x533.png"], ["user_id", 6], ["created_at", "2015-05-25 10:20:46.573665"], ["updated_at", "2015-05-25 10:20:46.573665"]]
+  [1m[35m (188.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/detail/19
+Completed 302 Found in 193ms (ActiveRecord: 188.5ms)
+
+
+Started GET "/products/detail/19" for 127.0.0.1 at 2015-05-25 17:20:46 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"19"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 17:20:51 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products/create" for 127.0.0.1 at 2015-05-25 17:21:39 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Sony Xperia Z3", "quantity"=>"1", "price"=>"14900000", "category_id"=>"3", "description"=>"Màn hình:\tFull HD, 5.2\", 1080 x 1920 pixels\r\nCPU:\tQualcomm Snapdragon 801, 4 nhân, 2.5 GHz\r\nRAM\t3GB\r\nHệ điều hành:\tAndroid 4.4 (KitKat)\r\nCamera chính:\t20.7 MP, Quay phim 4K 2160p@30fps\r\nCamera phụ:\t2.2 MP\r\nBộ nhớ trong:\t16 GB\r\nThẻ nhớ ngoài:\t128 GB\r\nDung lượng pin:\t3100 mAh", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fe8bc343850 @tempfile=#<Tempfile:/tmp/RackMultipart20150525-18603-1l5cs9h.png>, @original_filename="sony-xperia-z3-png.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"sony-xperia-z3-png.png\"\r\nContent-Type: image/png\r\n">, "status"=>"1"}}
+Unpermitted parameter: photo
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("title", "description", "status", "quantity", "category_id", "price", "photo", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Sony Xperia Z3"], ["description", "Màn hình:\tFull HD, 5.2\", 1080 x 1920 pixels\r\nCPU:\tQualcomm Snapdragon 801, 4 nhân, 2.5 GHz\r\nRAM\t3GB\r\nHệ điều hành:\tAndroid 4.4 (KitKat)\r\nCamera chính:\t20.7 MP, Quay phim 4K 2160p@30fps\r\nCamera phụ:\t2.2 MP\r\nBộ nhớ trong:\t16 GB\r\nThẻ nhớ ngoài:\t128 GB\r\nDung lượng pin:\t3100 mAh"], ["status", "t"], ["quantity", 1], ["category_id", 3], ["price", 14900000.0], ["photo", "sony-xperia-z3-png.png"], ["user_id", 6], ["created_at", "2015-05-25 10:21:39.872757"], ["updated_at", "2015-05-25 10:21:39.872757"]]
+  [1m[36m (115.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/detail/20
+Completed 302 Found in 121ms (ActiveRecord: 115.4ms)
+
+
+Started GET "/products/detail/20" for 127.0.0.1 at 2015-05-25 17:21:39 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"20"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-25 17:21:56 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:22:10 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/detail/20" for 127.0.0.1 at 2015-05-25 17:23:11 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"20"}
+  [1m[36mProduct Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:25:46 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:29:19 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:30:05 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:30:07 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:30:14 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/detail/19" for 127.0.0.1 at 2015-05-25 17:31:29 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"19"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:32:05 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:34:09 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (16.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 39ms (Views: 21.7ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:34:11 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  [1m[36m (5.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 25ms (Views: 17.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/products/detail/20" for 127.0.0.1 at 2015-05-25 17:34:20 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"20"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/detail/17" for 127.0.0.1 at 2015-05-25 17:34:28 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"17"}
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/detail/18" for 127.0.0.1 at 2015-05-25 17:34:44 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"18"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 17:34:51 +0700
+Processing by UsersController#info as HTML
+  Rendered users/info.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 17:40:04 +0700
+Processing by UsersController#info as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  Rendered users/info.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 777ms (Views: 72.5ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 17:40:47 +0700
+Processing by UsersController#info as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = ?  [["user_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  Rendered users/info.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 17:41:21 +0700
+Processing by UsersController#info as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  Rendered users/info.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 119ms (Views: 115.6ms | ActiveRecord: 1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAddressPhoneToUser (20150525104356)
+  [1m[35m (30.9ms)[0m  begin transaction
+  [1m[36m (73.1ms)[0m  [1mALTER TABLE "users" ADD "address" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "phone" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150525104356"]]
+  [1m[35m (97.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+[0m
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 17:45:24 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#info as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  Rendered users/info.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 114ms (Views: 48.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 17:46:02 +0700
+Processing by UsersController#info as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" WHERE "products"."user_id" = ?  [["user_id", 6]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  Rendered users/info.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/detail/17" for 127.0.0.1 at 2015-05-25 17:46:23 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"17"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 749ms (Views: 51.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/newproduct" for 127.0.0.1 at 2015-05-25 17:50:37 +0700
+Processing by ProductsController#newproduct as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered products/newproduct.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 17:50:47 +0700
+Processing by UsersController#info as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products" WHERE "products"."user_id" = ?  [["user_id", 6]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  Rendered users/info.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:51:01 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 20]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 19]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 18]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/detail/20" for 127.0.0.1 at 2015-05-25 17:51:06 +0700
+Processing by ProductsController#detail as HTML
+  Parameters: {"product_id"=>"20"}
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/detail.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:56:19 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:56:22 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:56:25 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-05-25 17:56:29 +0700
+Processing by ProductsController#receipts as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  Rendered products/receipts.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/search" for 127.0.0.1 at 2015-05-25 17:57:16 +0700
+Processing by ProductsController#search as HTML
+  Rendered products/search.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 107ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/search" for 127.0.0.1 at 2015-05-25 17:57:32 +0700
+Processing by ProductsController#search as HTML
+  Rendered products/search.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 18:00:04 +0700
+Processing by UsersController#info as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = ?  [["user_id", 6]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  Rendered users/info.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (19.2ms)[0m  UPDATE "users" SET "address" = ?, "phone" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["address", "132/103 Nguyen Huu Canh - Binh Thanh"], ["phone", 975667043], ["updated_at", "2015-05-25 11:01:38.649937"], ["id", 6]]
+  [1m[36m (169.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/users/info" for 127.0.0.1 at 2015-05-25 18:01:41 +0700
+Processing by UsersController#info as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = ?  [["user_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 16]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 20]]
+  Rendered users/info.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-05-25 18:01:58 +0700
+Processing by WelcomeController#contact as HTML
+  Rendered welcome/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-05-25 18:02:18 +0700
+Processing by WelcomeController#contact as HTML
+  Rendered welcome/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 124ms (Views: 123.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-05-25 18:19:12 +0700
+Processing by WelcomeController#contact as HTML
+Completed 500 Internal Server Error in 523ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `delay' for UserContact:Class):
+  app/controllers/welcome_controller.rb:12:in `contact'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (69.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.1ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (33.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (49.7ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-05-25 18:20:43 +0700
+Processing by WelcomeController#contact as HTML
+  Rendered user_contact/contact.html.erb within layouts/mailer (1.3ms)
+
+UserContact#contact: processed outbound mail in 634.8ms
+
+Sent mail to ngocphu.uit@gmail.com (813.1ms)
+Date: Mon, 25 May 2015 18:20:44 +0700
+From: ngocphu.uit@gmail.com
+To: ngocphu.uit@gmail.com
+Message-ID: <5563058c6033c_48ab3ff4508af0f0477c6@ngocphu.mail>
+Subject: Welcome to our app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html lang=3D"en">
+<head>
+	<meta charset=3D"UTF-8">
+	<title>Contact</title>
+</head>
+<body>
+	<h1>Xin ch=C3=A0o b=E1=BA=A1n ,</h1>
+	<h1>Phone:  </h1>
+	<h1>Email: </h1>
+	<p>
+		=
+
+	</p>
+</body>
+</html>
+  </body>
+</html>
+
+  Rendered welcome/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1489ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2015-05-25 18:21:36 +0700
+
+ActionController::RoutingError (No route matches [POST] "/contact"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.8ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.5ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (22.5ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-05-25 18:23:36 +0700
+Processing by WelcomeController#contact as HTML
+  Rendered welcome/contact.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2015-05-25 18:23:49 +0700
+Processing by WelcomeController#sendcontact as */*
+  Parameters: {"name"=>"nopu Nguyen", "email"=>"ngocphu.uit@gmail.com", "phone"=>"0975667043", "comments"=>"hi admin. i have problem with my acc, so I can remenber my password, You can reset for me. Thanks so much"}
+  Rendered user_contact/contact.html.erb within layouts/mailer (0.2ms)
+
+UserContact#contact: processed outbound mail in 8.3ms
+
+Sent mail to ngocphu.uit@gmail.com (29.7ms)
+Date: Mon, 25 May 2015 18:23:49 +0700
+From: ngocphu.uit@gmail.com
+To: ngocphu.uit@gmail.com
+Message-ID: <556306452bea1_48ab3ff45e3d78a8478f1@ngocphu.mail>
+Subject: Welcome to our app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html lang=3D"en">
+<head>
+	<meta charset=3D"UTF-8">
+	<title>Contact</title>
+</head>
+<body>
+	<h1>Xin ch=C3=A0o b=E1=BA=A1n nopu Nguyen,</h1>
+	<h1>Phone: 0975667043 </h1>
+	<h1>Email: ngocphu.uit@gmail.com</h1>
+	<p>
+		hi admin. i have problem with my acc, so I can remenber my password, Yo=
+u can reset for me. Thanks so much
+	</p>
+</body>
+</html>
+  </body>
+</html>
+
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template welcome/sendcontact, application/sendcontact with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/var/www/social/app/views"
+):
+  app/controllers/welcome_controller.rb:13:in `sendcontact'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.4ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (22.6ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-05-25 18:24:51 +0700
+Processing by WelcomeController#contact as HTML
+  Rendered welcome/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2015-05-25 18:24:59 +0700
+Processing by WelcomeController#sendcontact as */*
+  Parameters: {"name"=>"Trúc Ngân", "email"=>"baohoason2000@yahoo.com", "phone"=>"09756670438", "comments"=>"hi admin. i have problem with my acc, so I can remenber my password, You can reset for me. Thanks so much"}
+  Rendered user_contact/contact.html.erb within layouts/mailer (0.1ms)
+
+UserContact#contact: processed outbound mail in 6.3ms
+
+Sent mail to ngocphu.uit@gmail.com (5.4ms)
+Date: Mon, 25 May 2015 18:24:59 +0700
+From: ngocphu.uit@gmail.com
+To: ngocphu.uit@gmail.com
+Message-ID: <5563068b5b285_48ab3ff450ad8a8447976@ngocphu.mail>
+Subject: Welcome to our app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html lang=3D"en">
+<head>
+	<meta charset=3D"UTF-8">
+	<title>Contact</title>
+</head>
+<body>
+	<h1>Xin ch=C3=A0o b=E1=BA=A1n Tr=C3=BAc Ng=C3=A2n,</h1>
+	<h1>Phone: 09756670438 </h1>
+	<h1>Email: baohoason2000@yahoo.com</h1>
+	<p>
+		hi admin. i have problem with my acc, so I can remenber my password, Yo=
+u can reset for me. Thanks so much
+	</p>
+</body>
+</html>
+  </body>
+</html>
+
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template welcome/sendcontact, application/sendcontact with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/var/www/social/app/views"
+):
+  app/controllers/welcome_controller.rb:13:in `sendcontact'
+
+
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.6ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/ngocphu/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (22.8ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-05-25 18:25:18 +0700
+Processing by WelcomeController#contact as HTML
+  Rendered welcome/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contact" for 127.0.0.1 at 2015-05-25 18:25:26 +0700
+Processing by WelcomeController#sendcontact as */*
+  Parameters: {"name"=>"Trúc Ngân", "email"=>"ngocphu.uit@gmail.com", "phone"=>"0975667043", "comments"=>"hi admin. i have problem with my acc, so I can remenber my password, You can reset for me. Thanks so much"}
+  Rendered user_contact/contact.html.erb within layouts/mailer (0.2ms)
+
+UserContact#contact: processed outbound mail in 7.1ms
+
+Sent mail to ngocphu.uit@gmail.com (8.9ms)
+Date: Mon, 25 May 2015 18:25:26 +0700
+From: ngocphu.uit@gmail.com
+To: ngocphu.uit@gmail.com
+Message-ID: <556306a65a67f_48ab3ff450ad8a8448024@ngocphu.mail>
+Subject: Welcome to our app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html lang=3D"en">
+<head>
+	<meta charset=3D"UTF-8">
+	<title>Contact</title>
+</head>
+<body>
+	<h1>Xin ch=C3=A0o b=E1=BA=A1n Tr=C3=BAc Ng=C3=A2n,</h1>
+	<h1>Phone: 0975667043 </h1>
+	<h1>Email: ngocphu.uit@gmail.com</h1>
+	<p>
+		hi admin. i have problem with my acc, so I can remenber my password, Yo=
+u can reset for me. Thanks so much
+	</p>
+</body>
+</html>
+  </body>
+</html>
+
+Completed 200 OK in 30ms (ActiveRecord: 0.0ms)
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m

@@ -1,24 +1,29 @@
 class ProductsController < ApplicationController
-	before_action :check_login, only: [:create, :newreceipt]
+	before_action :check_login, only: [:create, :newproduct]
 
 	def index
 	end
 
 	def detail
-		@product = Product.find(params[:product_id])
-		puts(@product)
+		if Product.exists?(id: params[:product_id])
+			@product = Product.find(params[:product_id])
+		else
+			render json: {error: "dont have product"}
+		end
 	end
 
 	def category
 	end
 
 	def receipts
+		@products = Product.order(id: :desc)
 	end
 
 	def search
 	end
 
-	def newreceipt
+	def newproduct
+		@categorys = Category.all
 	end
 
 	def create
@@ -34,7 +39,7 @@ class ProductsController < ApplicationController
 
 	private
 		def product_params
-			params.require(:product).permit(:title, :description, :status, :quantity)
+			params.require(:product).permit(:title, :description, :status, :quantity, :category_id, :price )
 		end
 
 		def check_login

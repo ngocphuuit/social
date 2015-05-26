@@ -24,7 +24,7 @@
 							<div class="row">
 								<!--two-third-->
 								<article class="two-third wow fadeInLeft">
-									<div class="image"><a href="#"><img src="<%= @product.photo_url %>" alt="" height="284px" width="568px"/></a></div>
+									<div class="image"><a href="#"><img src="<%= @product.photo_url %>" alt="" height="100%" width="100%"/></a></div>
 									<div class="intro"><p><%= @product.description %></p></div>
 									<div class="instructions">
 										<ol>
@@ -35,20 +35,18 @@
 									</div>
 								</article>
 								<!--//two-third-->
-								
+
 								<!--one-third-->
 								<article class="one-third wow fadeInDown">
 									<dl class="basic">
 										<dt>Price</dt>
-										<dd>15 mins</dd>
+										<dd><%= @product.price %></dd>
 										<dt>Quantity</dt>
-										<dd>30 mins</dd>
-										<dt>Difficulty</dt>
-										<dd>easy</dd>
-										<dt>Serves</dt>
-										<dd>4 people</dd>
+										<dd><%= @product.quantity %></dd>
+										<dt>Category</dt>
+										<dd><%= @product.category.title %></dd>
 									</dl>
-									
+
 									<dl class="user">
 										<dt>Category</dt>
 										<dd>Deserts</dd>
@@ -61,7 +59,7 @@
 										<dt>Email</dt>
 										<dd>nopunguyen@gmail.com</dd>
 									</dl>
-									
+
 									<dl class="ingredients">
 										<dt>300g</dt>
 										<dd>Self-raising flour</dd>
@@ -85,7 +83,7 @@
 							</div>
 						</div>
 						<!--//recipe-->
-							
+
 						<!--comments-->
 						<div class="comments wow fadeInUp" id="comments">
 							<h2>5 comments </h2>
@@ -103,7 +101,7 @@
 									</div> 
 								</li>
 								<!--//comment-->
-								
+
 								<!--comment-->
 								<li class="comment depth-1">
 									<div class="avatar"><a href="my_profile.html"><img src="/images/avatar2.jpg" alt="" /></a></div>
@@ -117,7 +115,7 @@
 									</div> 
 								</li>
 								<!--//comment-->
-								
+
 								<!--comment-->
 								<li class="comment depth-2">
 									<div class="avatar"><a href="my_profile.html"><img src="/images/avatar1.jpg" alt="" /></a></div>
@@ -131,7 +129,7 @@
 									</div> 
 								</li>
 								<!--//comment-->
-								
+
 								<!--comment-->
 								<li class="comment depth-3">
 									<div class="avatar"><a href="my_profile.html"><img src="/images/avatar2.jpg" alt="" /></a></div>
@@ -145,7 +143,7 @@
 									</div> 
 								</li>
 								<!--//comment-->
-								
+
 								<!--comment-->
 								<li class="comment depth-1">
 									<div class="avatar"><a href="my_profile.html"><img src="/images/avatar3.jpg" alt="" /></a></div>
@@ -162,7 +160,7 @@
 							</ol>
 						</div>
 						<!--//comments-->
-						
+
 						<!--respond-->
 						<div class="comment-respond wow fadeInUp" id="respond">
 							<h2>Leave a reply</h2>
@@ -175,27 +173,27 @@
 											<input type="text" placeholder="Your name" />
 											<span class="req">*</span>
 										</div>
-										
+
 										<div class="third">
 											<input type="email" placeholder="Your email" />
 											<span class="req">*</span>
 										</div>
-										
+
 										<div class="third">
 											<input type="text" placeholder="Your website" />
 										</div>
-									
+
 									</div>
 									<div class="f-row">
 										<textarea></textarea>
 									</div>
-									
+
 									<div class="f-row">
 										<div class="third bwrap">
 											<input type="submit" value="Submit comment" />
 										</div>
 									</div>
-									
+
 									<div class="bottom">
 										<div class="f-row checkbox">
 											<input type="checkbox" id="ch1" />
@@ -212,7 +210,7 @@
 						<!--//respond-->
 				</section>
 				<!--//content-->
-				
+
 				<!--right sidebar-->
 				<aside class="sidebar one-fourth wow fadeInRight">
 					<div class="widget nutrition">
@@ -252,7 +250,7 @@
 							</tr>
 						</table>
 					</div>
-					
+
 					<div class="widget share">
 						<ul class="boxed">
 							<li class="light"><a href="#" title="Facebook"><i class="ico i-facebook"></i> <span>Share on Facebook</span></a></li>
@@ -260,7 +258,7 @@
 							<li class="dark"><a href="#" title="Favourites"><i class="ico i-favourites"></i> <span>Add to Favourites</span></a></li>
 						</ul>
 					</div>
-					
+
 					<div class="widget members">
 						<h3>Members who liked this recipe</h3>
 						<ul class="boxed">

@@ -16,13 +16,14 @@ Rails.application.routes.draw do
   ### Product
   get   'products'                          => 'products#receipts'
   get   'products/detail/:product_id'       => 'products#detail' , as: 'products_detail'
-  get   'products/newreceipts'              => 'products#newreceipt'
+  get   'products/newproduct'               => 'products#newproduct'
   get   'products/search'                   => 'products#search'
   post  'products/create'                   => 'products#create'
 
   ### Welcome
   get   'about'                             => 'welcome#about'
   get   'contact'                           => 'welcome#contact'
+  post  'contact'                           => 'welcome#sendcontact'
   get   'blog'                              => 'welcome#blog'
   get   'blogdetail'                        => 'welcome#blogdetail'
 end
