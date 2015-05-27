@@ -36,16 +36,20 @@ class UsersController < ApplicationController
 	end
 
 	def register
-		if User.exists?(email: params[:user][:email])
-			redirect_to users_register_path
-		else
-			@user = User.new(user_params)
-			@user.password = params[:user][:password]
-			if @user.save
-				redirect_to users_login_path
-			else
+		if params[:user][:password] == params[:user][:confirm_password]
+			if User.exists?(email: params[:user][:email]) || validate_email(params[:user][:email])
 				redirect_to users_register_path
+			else
+				@user = User.new(user_params)
+				@user.password = params[:user][:password]
+				if @user.save
+					redirect_to users_login_path
+				else
+					redirect_to users_register_path
+				end
 			end
+		else
+			redirect_to users_register_path
 		end
 	end
 
@@ -58,5 +62,9 @@ class UsersController < ApplicationController
 
 		def user_params
 			params.require(:user).permit(:name, :email)
+		end
+
+		def validate_email(email)
+			email !~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 		end
 end
