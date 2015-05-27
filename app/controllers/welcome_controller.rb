@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
 
 	def index
+		@product_lasteds = Product.order(id: :desc).limit(6)
 	end
 
 	def sendcontact

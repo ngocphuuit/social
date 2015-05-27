@@ -193,129 +193,41 @@
 						<!--//entries-->
 					</div>
 					<!--//cwrap-->
-				
+
 					<!--cwrap-->
 					<div class="cwrap">
 						<header class="s-title">
-							<h2 class="ribbon bright">Latest recipes</h2>
+							<h2 class="ribbon bright">Latest products</h2>
 						</header>
-						
+
 						<!--entries-->
 						<div class="entries row">
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft">
-								<figure>
-									<img src="/images/img6.jpg" alt="" />
-									<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="recipe.html">Thai fried rice with fruit and vegetables</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="difficulty"><i class="ico i-medium"></i><a href="#">medium</a></div>
-											<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
+							<% i=0 %>
+							<% @product_lasteds.each do |product_lasted| %>
+
+								<!--item-->
+								<div class="entry one-third wow fadeInLeft" data-wow-delay="<%= i %>s">
+									<figure>
+										<img src="<%= product_lasted.photo %>" alt="" height="203px" style="margin: auto"/>
+										<figcaption><a href="/products/detail/<%= product_lasted.id %>"><i class="ico i-view"></i> <span>View product</span></a></figcaption>
+									</figure>
+									<div class="container">
+										<h2><a href="/products/detail/<%= product_lasted.id %>"><%= product_lasted.title %></a></h2> 
+										<div class="actions">
+											<div>
+												<div class="difficulty"><i class="ico i-medium"></i><a href="#"><%= product_lasted.price %></a></div>
+												<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
+												<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments"><%= product_lasted.comments.count %></a></div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<!--item-->
-							
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft" data-wow-delay=".2s">
-								<figure>
-									<img src="/images/img5.jpg" alt="" />
-									<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="recipe.html">Spicy Morroccan prawns with cherry tomatoes</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="difficulty"><i class="ico i-hard"></i><a href="#">hard</a></div>
-											<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--item-->
-							
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft" data-wow-delay=".4s">
-								<figure>
-									<img src="/images/img8.jpg" alt="" />
-									<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="recipe.html">Super easy blueberry cheesecake</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="difficulty"><i class="ico i-easy"></i><a href="#">easy</a></div>
-											<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--item-->
-							
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft" data-wow-delay=".6s">
-								<figure>
-									<img src="/images/img7.jpg" alt="" />
-									<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="recipe.html">Refreshing banana split with a twist for adults</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="difficulty"><i class="ico i-hard"></i><a href="#">hard</a></div>
-											<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--item-->
-							
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft" data-wow-delay=".8s">
-								<figure>
-									<img src="/images/img3.jpg" alt="" />
-									<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="recipe.html">Sushi mania: this is the best sushi you have ever tasted</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="difficulty"><i class="ico i-easy"></i><a href="#">easy</a></div>
-											<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--item-->
-							
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft" data-wow-delay="1s">
-								<figure>
-									<img src="/images/img4.jpg" alt="" />
-									<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="recipe.html">Princess puffs - an old classic at its best</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="difficulty"><i class="ico i-hard"></i><a href="#">hard</a></div>
-											<div class="likes"><i class="ico i-likes"></i><a href="#">10</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="recipe.html#comments">27</a></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--item-->
-							
+								<!--item-->
+
+								<% i += 0.2 %>
+
+							<% end %>
+
 							<div class="quicklinks">
 								<a href="#" class="button">More recipes</a>
 								<a href="javascript:void(0)" class="button scroll-to-top">Back to top</a>
@@ -324,7 +236,7 @@
 						<!--//entries-->
 					</div>
 					<!--//cwrap-->
-				
+
 					<!--cwrap-->
 					<div class="cwrap">
 						<header class="s-title">

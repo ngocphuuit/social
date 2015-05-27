@@ -28,6 +28,8 @@ class UsersController < ApplicationController
 	end
 
 	def logout
+		session.delete(:user)
+		redirect_to users_login_path
 	end
 
 	def register_form

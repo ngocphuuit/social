@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get   'users/info'                        => 'users#info'
   get   'users/login'                       => 'users#login_form'
   post  'users/login'                       => 'users#login'
+  get   'users/logout'                      => 'users#logout'
   get   'users/register'                    => 'users#register_form'
   post  'users/register'                    => 'users#register'
 
