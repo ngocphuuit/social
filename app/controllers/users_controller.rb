@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	skip_before_action :verify_authenticity_token
-	before_action :check_login, only: [:info, :timeline]
+	before_action :check_login, only: [:info, :timeline, :edit]
 
 	def info
 		@user = User.find(session[:user]["id"])
@@ -50,6 +50,19 @@ class UsersController < ApplicationController
 			end
 		else
 			redirect_to users_register_path
+		end
+	end
+
+	def edit
+		@user = User.find(session[:user]["id"])
+		@user.name = params[:user][:name]
+		@user.address = params[:user][:address]
+		@user.phone = params[:user][:phone]
+		@user.avatar = params[:user][:avatar]
+		if @user.save
+			redirect_to users_info_path
+		else
+			render head 401
 		end
 	end
 

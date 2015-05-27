@@ -21,10 +21,10 @@
 					<!--profile left part-->
 					<div class="my_account one-fourth wow fadeInLeft">
 						<figure>
-							<% if session[:user]["avatar"].nil? %>
-								<img src="/images/avatar4.jpg" alt="" />
+							<% if @user.avatar_url.nil? %>
+								<img src="/images/avatar4.jpg" alt="" id="avatar" height="270px" width="270px" />
 							<% else %>
-								<img src="<%= session[:user]['avatar'] %>" alt="" />
+								<img src="<%= @user.avatar_url %>" alt="" id="avatar" height="270px" width="270px"/>
 							<% end %>
 						</figure>
 						<div class="container">
@@ -39,7 +39,7 @@
 								<li class="active"><a href="#about" title="About me">About me</a></li>
 								<li><a href="#recipes" title="My recipes">My products</a></li>
 								<li><a href="#favorites" title="My favorites">My favorites</a></li>
-								<li><a href="#posts" title="My posts">My posts</a></li>
+								<li><a href="#posts" title="My posts">Edit Info</a></li>
 							</ul>
 						</nav>
 						
@@ -175,70 +175,27 @@
 						<!--my posts-->
 						<div class="tab-content" id="posts">
 							<!--entries-->
-							<div class="entries row">
-								<!--item-->
-								<div class="entry one-third">
-									<figure>
-										<img src="/images/img12.jpg" alt="" />
-										<figcaption><a href="blog_single.html"><i class="ico i-view"></i> <span>View post</span></a></figcaption>
-									</figure>
-									<div class="container">
-										<h2><a href="blog_single.html">Barbeque party</a></h2> 
-										<div class="actions">
-											<div>
-												<div class="date"><i class="ico i-date"></i><a href="#">22 Dec 2014</a></div>
-												<div class="comments"><i class="ico i-comments"></i><a href="blog_single.html#comments">27</a></div>
-											</div>
-										</div>
-										<div class="excerpt">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod. Lorem ipsum dolor sit amet . . . </p>
-										</div>
-									</div>
-								</div>
-								<!--item-->
-								
-								<!--item-->
-								<div class="entry one-third">
-									<figure>
-										<img src="/images/img11.jpg" alt="" />
-										<figcaption><a href="blog_single.html"><i class="ico i-view"></i> <span>View post</span></a></figcaption>
-									</figure>
-									<div class="container">
-										<h2><a href="blog_single.html">How to make sushi</a></h2> 
-										<div class="actions">
-											<div>
-												<div class="date"><i class="ico i-date"></i><a href="#">22 Dec 2014</a></div>
-												<div class="comments"><i class="ico i-comments"></i><a href="blog_single.html#comments">27</a></div>
-											</div>
-										</div>
-										<div class="excerpt">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod. Lorem ipsum dolor sit amet . . . </p>
+							<!-- <div class="entries row"> -->
+								<form id="edit_info" action="/users/edit/<%= @user.id %>" method="post" enctype="multipart/form-data">
+									<div class="row">
+											<dl class="basic two-third" style="width:100%">
+												<dt>Email</dt>
+												<dd><%= @user.email %></dd>
+												<dt>Name</dt>
+												<dd><input type="text" placeholder="Enter your name" name="user[name]" value="<%= @user.name %>"></dd>
+												<dt>Address</dt>
+												<dd><input type="text" placeholder="Enter your address" name="user[address]" value="<%= @user.address %>"></dd>
+												<dt>Phone</dt>
+												<dd><input type="text" placeholder="Enter your phone" name="user[phone]" value="<%= @user.phone %>" ></dd>
+												<dt>Avatar</dt>
+												<dd><input type="file" onchange="previewFile()" name="user[avatar]"></dd>
+												<!-- <dt>Products submitted</dt> -->
+												<input type="submit" value="Submit" style="display:block; margin:auto">
+											</dl>
 										</div>
 									</div>
-								</div>
-								<!--item-->
-								
-								<!--item-->
-								<div class="entry one-third">
-									<figure>
-										<img src="/images/img10.jpg" alt="" />
-										<figcaption><a href="blog_single.html"><i class="ico i-view"></i> <span>View post</span></a></figcaption>
-									</figure>
-									<div class="container">
-										<h2><a href="blog_single.html">Make your own bread</a></h2> 
-										<div class="actions">
-											<div>
-												<div class="date"><i class="ico i-date"></i><a href="#">22 Dec 2014</a></div>
-												<div class="comments"><i class="ico i-comments"></i><a href="blog_single.html#comments">27</a></div>
-											</div>
-										</div>
-										<div class="excerpt">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod. Lorem ipsum dolor sit amet . . . </p>
-										</div>
-									</div>
-								</div>
-								<!--item-->
-							</div>
+								</form>
+							<!-- </div> -->
 							<!--//entries-->
 						</div>
 						<!--//my posts-->
@@ -248,6 +205,24 @@
 			</section>
 			<!--//content-->
 		</div>
+
+		<script>
+			function previewFile() {
+				var preview = document.querySelector('#avatar');
+				var file    = document.querySelector('input[type=file]').files[0];
+				var reader  = new FileReader();
+
+				reader.onloadend = function () {
+					preview.src = reader.result;
+				}
+
+				if (file) {
+					reader.readAsDataURL(file);
+				} else {
+					preview.src = "";
+				}
+			}
+		</script>
 		<!--//wrap-->
 	</main>
 	<!--//main-->

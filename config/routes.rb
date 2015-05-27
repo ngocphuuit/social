@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get   'users/logout'                      => 'users#logout'
   get   'users/register'                    => 'users#register_form'
   post  'users/register'                    => 'users#register'
+  post  'users/edit/:user_id'               => 'users#edit'
 
   ### Product
   get   'products'                          => 'products#receipts'
