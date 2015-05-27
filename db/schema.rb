@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150525104356) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -29,8 +32,8 @@ ActiveRecord::Schema.define(version: 20150525104356) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["product_id"], name: "index_comments_on_product_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["product_id"], name: "index_comments_on_product_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "title"
@@ -45,8 +48,8 @@ ActiveRecord::Schema.define(version: 20150525104356) do
     t.float    "price"
   end
 
-  add_index "products", ["category_id"], name: "index_products_on_category_id"
-  add_index "products", ["user_id"], name: "index_products_on_user_id"
+  add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
+  add_index "products", ["user_id"], name: "index_products_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -69,4 +72,8 @@ ActiveRecord::Schema.define(version: 20150525104356) do
     t.integer  "phone"
   end
 
+  add_foreign_key "comments", "products"
+  add_foreign_key "comments", "users"
+  add_foreign_key "products", "categories"
+  add_foreign_key "products", "users"
 end
