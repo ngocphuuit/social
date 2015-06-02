@@ -244,69 +244,32 @@
 						</header>
 						<!--entries-->
 						<div class="entries row">
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft">
-								<figure>
-									<img src="/images/img12.jpg" alt="" />
-									<figcaption><a href="blog_single.html"><i class="ico i-view"></i> <span>View post</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="blog_single.html">Barbeque party</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="date"><i class="ico i-date"></i><a href="#">22 Dec 2014</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="blog_single.html#comments">27</a></div>
+						<% i=0 %>
+							<% @product_lasteds.each do |product_lasted| %>
+
+								<!--item-->
+								<div class="entry one-third wow fadeInLeft" data-wow-delay="<%= i %>s">
+									<figure>
+										<img src="<%= product_lasted.photo %>" alt="" height="203px" style="margin: auto"/>
+										<figcaption><a href="/products/detail/<%= product_lasted.id %>"><i class="ico i-view"></i> <span>View product</span></a></figcaption>
+									</figure>
+									<div class="container">
+										<h2><a href="/products/detail/<%= product_lasted.id %>"><%= product_lasted.title %></a></h2> 
+										<div class="actions">
+											<div>
+												<div class="date"><i class="ico i-date"></i><a href="#"><%= product_lasted.created_at.strftime('%d %b %Y') %></a></div>
+												<div class="comments"><i class="ico i-comments"></i><a href="blog_single.html#comments"><%= product_lasted.comments.count %></a></div>
+											</div>
+										</div>
+										<div class="excerpt">
+											<p><%= product_lasted.description %></p>
 										</div>
 									</div>
-									<div class="excerpt">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod. Lorem ipsum dolor sit amet . . . </p>
-									</div>
 								</div>
-							</div>
-							<!--item-->
-							
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft" data-wow-delay=".2s">
-								<figure>
-									<img src="/images/img11.jpg" alt="" />
-									<figcaption><a href="blog_single.html"><i class="ico i-view"></i> <span>View post</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="blog_single.html">How to make sushi</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="date"><i class="ico i-date"></i><a href="#">22 Dec 2014</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="blog_single.html#comments">27</a></div>
-										</div>
-									</div>
-									<div class="excerpt">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod. Lorem ipsum dolor sit amet . . . </p>
-									</div>
-								</div>
-							</div>
-							<!--item-->
-							
-							<!--item-->
-							<div class="entry one-third wow fadeInLeft" data-wow-delay=".4s">
-								<figure>
-									<img src="/images/img10.jpg" alt="" />
-									<figcaption><a href="blog_single.html"><i class="ico i-view"></i> <span>View post</span></a></figcaption>
-								</figure>
-								<div class="container">
-									<h2><a href="blog_single.html">Make your own bread</a></h2> 
-									<div class="actions">
-										<div>
-											<div class="date"><i class="ico i-date"></i><a href="#">22 Dec 2014</a></div>
-											<div class="comments"><i class="ico i-comments"></i><a href="blog_single.html#comments">27</a></div>
-										</div>
-									</div>
-									<div class="excerpt">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod. Lorem ipsum dolor sit amet . . . </p>
-									</div>
-								</div>
-							</div>
-							<!--item-->
-							
+								<!--item-->
+								<% i += 0.2 %>
+							<% end %>
+
 							<div class="quicklinks">
 								<a href="#" class="button">More posts</a>
 								<a href="javascript:void(0)" class="button scroll-to-top">Back to top</a>
